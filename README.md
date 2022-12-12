@@ -11,10 +11,9 @@ Generation USA Final Project
 Create a Task Planner web app from scratch.
 Demonstrate the technical and non-technical skills developed during the Junior Web Developer program.
 
-PREVIEW:
-<p>
+## PREVIEW:
+
 ![image](https://user-images.githubusercontent.com/111026797/206975665-59129eb7-d7f6-4ea9-aba5-f2bed897ce71.png)
-  </p>
 
 ## Features 📋 
 
