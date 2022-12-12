@@ -2,7 +2,7 @@
 Generation USA Final Project
 
 ### Team Members:
-👩🏽‍💻Alisha Griffin
+👩🏽‍💻Alisha Griffin <br>
 👨🏽‍💻Sylvestre Kantabadouno
  
 
