@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+};
+
+
+#submit {
+    margin: 10px auto;
+};
+
+
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+  }
+  
+  :root {
+    --card-height: 320px;
+    --card-width: 480px;
+  }
+  
+  
+  body {
+    min-height: 30vh;
+    background-image: url('/ASSETS/Img/NumberBG.jpg');
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    box-sizing: border-box;
+  }
+
+  /* Decorate Container */
+  .container {
+    background: #d2d5e1;
+    width: var();
+    height: var();
+    padding: 8px;
+    position: relative;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    font-size: 1.5em;
+    color: rgba(59, 134, 168, 0.759);
+    cursor: pointer;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: rgb(5, 5, 5);
+    margin: 10px auto;
+  }
+  
+  .container:hover {
+    color: rgb(57, 98, 234);
+    transition: color 1s;
+  }
+  
+  
+  .container::before {
+    content: "";
+    width: 104%;
+    height: 102%;
+    border-radius: 8px;
+    background-image: linear-gradient(
+      var(--rotate)
+      , #7b5dff, #443ce3 43%, #1310b7);
+      filter: blur(calc(var(--card-height) / 6));
+      position: absolute;
+      z-index: -1;
+      top: -1%;
+      left: -2%;
+      animation: spin 2.5s linear infinite;
+  }
+  
+  .container::after {
+    position: absolute;
+    content: "";
+    top: calc(var(--card-height) / 6);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(var(--card-height) / 6));
+    background-image: linear-gradient(
+      var(--rotate)
+      , #7d5dff, #3c41e3 43%, #3400c2);
+      opacity: 1;
+    transition: opacity .5s;
+    animation: spin 2.5s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      --rotate: 0deg;
+    }
+    100% {
+      --rotate: 360deg;
+    }
+  }
+  
+  a {
+    color: #212534;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-top: 2rem;
+  }
+  
+  /* wrapper - sliced effect */
+
+  .wrapper {
+    display: grid;
+    place-content: center;
+    background-color: rgba(255, 255, 255, 0.026);
+    min-height: 30vh;
+    font-family: "Oswald", sans-serif;
+    font-size: 5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgb(0, 59, 252);
+  }
+
+  .wrapper > div {
+    grid-area: 1/1/-1/-1;
+  }
+
+  .top {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 48%, 0% 58%);
+  }
+
+  .bottom {
+    clip-path: polygon(0% 60%, 100% 50%, 100% 100%, 0% 100%);
+    color: rgba(124, 141, 215, 0.814);
+    background-clip: text;
+    -webkit-background-clip: text;
+    transform: translateX(-0.02em);
+  }
+
+/* button */
+
+#taskBtn {
+    border-radius: 15px;
+    background-color: rgb(0, 59, 252);
+}
+
+
+  /* Added Task BG */
+  
+  .task {
+    font-size: 15px;
+    background-color: rgb(221, 222, 237);
+    border: 1 groove rgb(221, 222, 237);
+    border-radius: 15px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+
+/* task manager html btns */
+
+.task-desc {
+    margin-top: 15px;
+    height: 50px;
+    overflow: auto;
+}
+
+
+.task-top,
+.task-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-bottom {
+    margin-top: 10px;
+}
+
+.list-group-item {
+    background-color: #060507;
+    border-radius: 15px;
+    width: 100%;
+    padding: 2px 2px;
+}
