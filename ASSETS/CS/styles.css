@@ -22,7 +22,7 @@
   
   body {
     min-height: 30vh;
-    background-image: url('/ASSETS/Img/NumberBG.jpg');
+    background-image: url('../IMG/NumberBG.jpg');
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -142,10 +142,10 @@
 
 /* button */
 
-#taskBtn {
+/* #taskBtn {
     border-radius: 15px;
     background-color: rgb(0, 59, 252);
-}
+} */
 
 
   /* Added Task BG */

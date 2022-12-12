@@ -28,7 +28,7 @@ const createTaskHtml = (name,description,assignedTo,dueDate,status,id) => {
     return html;
 }
 
-class TaskManager {
+class taskManager {
     constructor(currentId=0) {
         this.tasks = []
         this._currentId=currentId
@@ -85,3 +85,5 @@ class TaskManager {
         this._currentId--
     }
 }
+
+export default taskManager
